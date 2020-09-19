@@ -3,10 +3,6 @@ select * from products;
 select * from review_id_table;
 select * from vine_table;
 
-select count(*) from customers;
-select count(*) from vine_table;
-
-
 --Total reviews
 select count(*) from review_id_table; -- 5,906,333
 
@@ -40,6 +36,26 @@ SELECT vine, star_rating, COUNT(star_rating)
 FROM vine_table WHERE vine is not null and star_rating = '5'
 GROUP BY vine, star_rating;  -- 3,319,450(N)/1,107(Y)
 
+-- 4 Star Rating Counts
+SELECT vine, star_rating, COUNT(star_rating) 
+FROM vine_table WHERE vine is not null and star_rating = '4'
+GROUP BY vine, star_rating;  -- 1,146,396(N)/841(Y)
+
+-- 3 Star Rating Counts
+SELECT vine, star_rating, COUNT(star_rating) 
+FROM vine_table WHERE vine is not null and star_rating = '3'
+GROUP BY vine, star_rating;  -- 623,196(N)/275(Y)
+
+-- 2 Star Rating Counts
+SELECT vine, star_rating, COUNT(star_rating) 
+FROM vine_table WHERE vine is not null and star_rating = '2'
+GROUP BY vine, star_rating;  -- 369,514(N)/87(Y)
+
+-- 1 Star Rating Counts
+SELECT vine, star_rating, COUNT(star_rating) 
+FROM vine_table WHERE vine is not null and star_rating = '1'
+GROUP BY vine, star_rating;  -- 445,430(N)/26(Y)
+
 -- Helpful Votes
 SELECT vine, COUNT(helpful_votes) FROM vine_table WHERE vine is not null
 GROUP BY vine; -- 5,903,986(N)/2,336(Y)
@@ -51,12 +67,30 @@ WHERE vine.review_id = rev.review_id AND vine = 'Y'
 GROUP BY product_id
 ORDER BY COUNT(*) DESC LIMIT 10;
 
+-- Vine Top 5 products Apparel Get star rating
+SELECT rev.product_id, vine.star_rating, COUNT(*)
+FROM vine_table AS vine, review_id_table AS rev
+WHERE vine.review_id = rev.review_id AND vine = 'Y'
+AND (rev.product_id = 'B002BFLJ70' OR rev.product_id = 'B00FXPRJWO' 
+	 OR rev.product_id = 'B004OA7QVI' OR rev.product_id = 'B004OA7QYA' 
+	 OR rev.product_id = 'B004OA7QT0')
+GROUP BY rev.product_id, vine.star_rating;
+
 -- No Vine Top 5 products Apparel
 SELECT rev.product_id, COUNT(*)
 FROM vine_table AS vine, review_id_table AS rev
 WHERE vine.review_id = rev.review_id AND vine = 'N'
 GROUP BY product_id
 ORDER BY COUNT(*) DESC LIMIT 10;
+
+-- No Vine Top 5 products Apparel Get star rating
+SELECT rev.product_id, vine.star_rating, COUNT(*)
+FROM vine_table AS vine, review_id_table AS rev
+WHERE vine.review_id = rev.review_id AND vine = 'N'
+AND (rev.product_id = 'B004M6XUI2' OR rev.product_id = 'B004M6UDF0' 
+	 OR rev.product_id = 'B006PGGJOE' OR rev.product_id = 'B0045H0L1W' 
+	 OR rev.product_id = 'B004M6UD46')
+GROUP BY rev.product_id, vine.star_rating;
 
 -- Percentage of Reviews that are vine. 
 SELECT (SELECT CAST(COUNT(vine) as float) FROM vine_table WHERE vine = 'Y') / (SELECT CAST(COUNT(vine) as float) FROM vine_table WHERE vine is not  null); 
