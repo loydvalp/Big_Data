@@ -29,7 +29,7 @@ Source:  https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Appar
 - 4 Star Reviews: 99.92% of the non-Vine reviewers gave a 4 star rating, compared to 0.07% for Vine reviewers.
 - 3 Star Reviews: 99.95% of the non-Vine reviewers gave a 3 star rating, compared to 0.05% for Vine reviewers.
 - 2 Star Reviews: 99.98% of the non-Vine reviewers gave a 2 star rating, compared to 0.02% for Vine reviewers.
-- 1 Star Reviews: 99.9% of the non-Vine reviewers gave a 1 star rating, compared to 0.1% for Vine reviewers.
+- 1 Star Reviews: 99.99% of the non-Vine reviewers gave a 1 star rating, compared to 0.01% for Vine reviewers.
 - The fields of Helpful Votes and Total Votes appear to be duplicates of the review counts.
 
 
