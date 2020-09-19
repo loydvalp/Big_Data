@@ -19,6 +19,7 @@ The goals of this challenge:
 ## Results
 
 Source:  https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Apparel_v1_00.tsv.gz
+
 Google Colab Notebook: https://colab.research.google.com/drive/1t20x0I6AC_7hOSLFm84lkpktCNpGroCJ?usp=sharing
 
 ### Statistical analysis to determine whether reviews are trustworthy from Amazon's Vine program
