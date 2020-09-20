@@ -37,4 +37,4 @@ Google Colab Notebook: https://colab.research.google.com/drive/1t20x0I6AC_7hOSLF
 
 #### Conclusion
 
-So are the Vines Reviewed biased? Almost 100% of the reviews came for non-vine users. Majority of the reviews for the apparel have a rating of 5 stars between both vine and non-vine.  47.4% of vine reviews were 5 stars.  56.2% of non-vine reviews were 5 starts.  4.8% of vine reviews were 2 stars or less.  13.8% of non-vine reviews were 2 stars or less.  With data shown, the vines reviews are not biased. 
+So are the Vines Reviewed biased? Almost 100% of the reviews came for non-vine users. The majority of the product's reviews for the apparel have a rating of 5 stars between both vine and non-vine.  47.4% of vine reviews were 5 stars.  56.2% of non-vine reviews were 5 stars.  4.8% of vine reviews were 2 stars or less.  13.8% of non-vine reviews were 2 stars or less.  Even though the majority of the users were non-vine, vine users rated the products higher.  95.2% of vine users gave a rating of 3 stars or higher.  86.2 % of non-vine users gave a rating of 3 stars or higher.  Vine users may be a little biased with the rating.  However, it is not 100% conclusive.  
