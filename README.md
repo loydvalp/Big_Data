@@ -22,7 +22,7 @@ Source:  https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Appar
 
 Google Colab Notebook: https://colab.research.google.com/drive/1t20x0I6AC_7hOSLFm84lkpktCNpGroCJ?usp=sharing
 
-### Statistical analysis to determine whether reviews are trustworthy from Amazon's Vine program
+### Statistical analysis to determine whether reviews are biased from Amazon's Vine program
 
 - There were 5,903,986 non-vine customers, 2,336 vine customers, and 11 null values. 
 - The top 5 customers with the most reviews were non-vine customers.
@@ -37,4 +37,4 @@ Google Colab Notebook: https://colab.research.google.com/drive/1t20x0I6AC_7hOSLF
 
 #### Conclusion
 
-So are the Vines Reviewed biased? Almost 100% of the reviews came for non-vine users. Majority of the reviews for the apparel have a ready of 5 stars between both vine and non-vine.  I don't believe the vines reviews are biased. 
+So are the Vines Reviewed biased? Almost 100% of the reviews came for non-vine users. Majority of the reviews for the apparel have a rating of 5 stars between both vine and non-vine.  47.4% of vine reviews were 5 stars.  56.2% of non-vine reviews were 5 starts.  4.8% of vine reviews were 2 stars or less.  13.8% of non-vine reviews were 2 stars or less.  With data shown, the vines reviews are not biased. 
